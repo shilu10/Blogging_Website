@@ -1,10 +1,26 @@
 import "./topbar.css"
 import {Link} from 'react-router-dom';
 import { colorActions } from "../store/store";
+import { useRef, useEffect } from 'react';
 
 export default function Topbar({ isUser, profilePicture }) {
  // const profilePicture = useSelector(state=>state.pictureReducer.profilePicture);
  // console.log(profilePicture, "topbar");
+
+  var toggleButton = useRef(null);
+  var topbarLinks = useRef(null);
+  const handleToggle = () =>{
+    console.log(topbarLinks.current.classList[0])
+  if(topbarLinks.current.classList[0] === "topbar-list-item-wrapper"){
+    topbarLinks.current.classList.remove("topbar-list-item-wrapper");
+    console.log(topbarLinks.current.classList)
+    topbarLinks.current.classList.add("topbar-list-item-wrapper-active");
+  }
+  else{
+    topbarLinks.current.classList.remove("topbar-list-item-wrapper-active");
+    topbarLinks.current.classList.add("topbar-list-item-wrapper");
+  }};
+  
   return (
     <div className="topbar">
         <Link className="link topbar-link" to="settings">
@@ -25,7 +41,7 @@ export default function Topbar({ isUser, profilePicture }) {
           <div className="topbar-logo">
             <i style={{fontSize:"32px"}} class="fa fa-cube"></i>
           </div>  
-          <div className="topbar-list-item-wrapper">        
+          <div className="topbar-list-item-wrapper" ref={topbarLinks}>        
             <ul className="top-list">
               <li className="toplist-item" >
                 <div className="li-box">
@@ -39,6 +55,13 @@ export default function Topbar({ isUser, profilePicture }) {
                   </Link>
                 </div>
               </li>
+              <li className="toplist-item">
+                <div className="li-box-contact">
+                  <Link className="link" to={"/contact"}>
+                    Contact
+                  </Link>
+                </div>
+              </li>
               <li className="toplist-item topbar-login">
                 <div className="li-box">
                   {isUser ? <Link className="link" to={"/logout"}>Logout</Link> : 
@@ -48,17 +71,10 @@ export default function Topbar({ isUser, profilePicture }) {
                   }
                 </div>
               </li>
-              <li className="toplist-item">
-                <div className="li-box-contact">
-                  <Link className="link" to={"/contact"}>
-                    Contact
-                  </Link>
-                </div>
-              </li>
             </ul>
           </div>
         </div>
-        <a href="#" className="topbar-hamburger">
+        <a href="#" className="topbar-hamburger" ref={toggleButton} onClick={handleToggle}>
             <span className="bar"></span>
             <span className="bar"></span>
             <span className="bar"></span>

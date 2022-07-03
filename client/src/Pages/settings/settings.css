@@ -1,6 +1,8 @@
 .setting{
     height: inherit;
     background-color: #dad6fc;
+    display: flex;
+    flex-direction: column;
 }
 
 .form-setting-wrapper{

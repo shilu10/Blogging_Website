@@ -132,7 +132,7 @@ const Settings = () => {
         
     return(
         <div className="setting" >
-            <Topbar isUser={realUsername?true:false} profilePicture={profilePicture}/>
+           
             <Toaster/>
             <div className='form-setting-wrapper'>
                 <div className='form-setting'>
