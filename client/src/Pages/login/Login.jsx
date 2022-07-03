@@ -20,10 +20,6 @@ export default function Login() {
   const dispatch = useDispatch();
   
   useEffect(() => {
-    gapi.load('auth2', () => {
-      gapi.auth2.init({
-        client_id: '418020920930-a54a5d5a26c9guqk0eh4cucrqd057gda.apps.googleusercontent.com',
-      });})
     
     if(currentregister){
       toast.success("You are Successfully registered, Please Login to continue!!!", {

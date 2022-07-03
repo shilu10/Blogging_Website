@@ -17,21 +17,17 @@ const LoginButton = () => {
         dispatch(loginActions.setCurrentLogin());
     }
 
-    const onFailure = (err) =>{
-        console.log("err", err)
-    }
     return(
         <div className='login-button'>
             <GoogleLogin 
-                
                 onSuccess={onSuccess}
                 buttonText="Continue with Google"
-                onFailure={onFailure}
                 cookiePolicy={'single_host_origin'}
                 isSignedIn={true}
                 style={{style: "none"}}
                 className="login-button-oauth"
                 scope=""
+                clientId={clientId}
             />
         </div>
     )};

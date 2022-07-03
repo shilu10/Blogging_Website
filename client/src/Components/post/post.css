@@ -152,7 +152,7 @@ post*{
 
 /* this is for blog design */
 .blog-details-wrapper{
-    margin: 30px;
+    margin: 10px;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -160,10 +160,10 @@ post*{
 }
 
 .blog-title{
-    font-size: 1.8rem;
+    font-size: 1.8rem!important;
     font-weight: bolder;
     margin-bottom: 10px;
-    font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Fira Sans,Droid Sans,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
     cursor: pointer;
 }
 
@@ -173,10 +173,14 @@ post*{
 
 .blog-desc{
     margin: 0px!important;
-    font-size: 1.3rem;
-    font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Fira Sans,Droid Sans,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji; 
+    font-size: 1.35rem!important;
+    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
     color: #746d6d;
-
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 
 .blog-footer{

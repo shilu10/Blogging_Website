@@ -9,10 +9,15 @@
     display: flex;
     align-items: center;
     font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
-    
+    flex-wrap: wrap;
     z-index: 900; 
     box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.13);
     justify-content: space-between;
+}
+
+.topbar-login{
+    position: absolute;
+    display: none!important;
 }
 
 .top-right{
@@ -20,6 +25,12 @@
     display:flex;
     align-items:center;
     justify-content: center ;
+}
+
+.topbar-link{
+    position: absolute;
+    display: none!important;
+    left: 20px;
 }
 
 .top-left{
@@ -120,32 +131,58 @@ a:hover{
     }
     .top-left{
         display: flex;
-        flex-direction: column;
+        flex-direction: column!important;
         width: 95%;
-        margin: 0px;
-        
+        margin: 0px;   
     }
-    .top-list{
-        flex-direction: column;
-        align-items: flex-start;
-        margin: 0px!important;
-        left: 0px;
-        width: 100%;
+    
+    .topbar-right-login{
+        display: none!important;
+    }
+    .topbar-login{
+        position: inherit;
+        display: flex!important;
+        color: #374151!important;
     }
     .topbar-list-item-wrapper{
         width: inherit;
-        align-items: flex-start;
+        margin-top: 20px;
+        position: relative;
+       margin-left: 0px!important;
+    }
+    .top-list{
+        display: flex!important;
+        flex-direction: column!important;
+        align-items: flex-start!important;
+        margin: 0px;
+    }
+    .li-box-contact{
+        width: 80px!important;
+        justify-content: start!important;
     }
     .li-box{
         height: 40px;
-        width: 100%!important;
+        width: 100%!important;  
+        justify-content: start!important; 
+        align-items: flex-start!important;
+    }
+    .li-box-contact{
+        height: 40px;
+        width: 100%!important;  
+        justify-content: start!important; 
+        align-items: flex-start!important;   
     }
     .toplist-item{
-        width: inherit;
+        width: 100%!important;
+        margin-top: 10px
     }
-    a{
-        left: 0px;
+    .topbar-right-link{
+        display: none!important;
     }
+    .topbar-link{
+        display: flex!important;
+    }
+   
 }
 
 .li-box{
@@ -162,7 +199,6 @@ a:hover{
     width: 85px;
     display: flex;
     justify-content: center;
-   
     border-radius: 4px;
 }
 
@@ -178,4 +214,8 @@ a{
 .li-box-contact:hover{
     background-color: rgba(184, 189, 189, 0.315);
     color: #374151
+}
+
+a{
+    color: #374151;
 }

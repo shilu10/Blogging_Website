@@ -9,8 +9,8 @@ const root1 = document.getElementById('root');
 root1.style.height = "inherit";
 
 root.render(
-  <Provider store={store}>
-        <App />
-  </Provider>
+    <Provider store={store}>
+          <App />
+    </Provider>
 );
 

@@ -8,6 +8,8 @@ import Contact from './Pages/contact/Contact';
 import Logout from './Pages/logout/Logout';
 import Register from './Pages/register/Register';
 import { useSelector } from 'react-redux';
+import { gapi } from 'gapi-script';
+import { useEffect } from 'react';
 import {
   BrowserRouter,
   Routes,
@@ -16,7 +18,15 @@ import {
 
 function App() {
   const backgroundColor = useSelector((state) => state.colorReducer.color)
-  console.log(backgroundColor, "color")
+  
+  useEffect(()=>{
+    gapi.load('client:auth2', () => {
+      gapi.client.init({
+        client_id: '418020920930-a54a5d5a26c9guqk0eh4cucrqd057gda.apps.googleusercontent.com',
+        scope: ""
+      });})
+    
+  });
   
   return (
     <div className="App" style={{height: "100%"}}>  
