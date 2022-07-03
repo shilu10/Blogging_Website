@@ -1,0 +1,95 @@
+.login-button-oauth{
+    border-width: 1.5px!important;
+    border-radius: 10px!important;
+    padding: 10px!important;
+    background-color: white;
+    display: flex;
+    margin-top: 10px!important;
+    border:0.5px solid rgb(5, 3, 3);
+    height: 50px;
+    width: 350px;
+    cursor: pointer;
+    outline: none;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+}
+
+@media screen and (max-width: 1600px) and (min-width: 1200px){
+    .login-button-oauth{
+        height: 70px!important;
+        width: 470px!important;
+    }
+    button>span{
+        font-size: 1.5rem; 
+    }
+    div.svg{
+        height: 30px;
+        width: 30px;
+    }
+}
+
+@media screen and (max-width: 371px) and (min-width:321px){
+    .login-button-oauth{
+        height: 45px!important;
+        width: 320px!important;
+    }
+    button>span{
+        font-size: 1.1rem;
+    }
+    div>svg{
+        height: 25px;
+        width: 25px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .login-button-oauth{
+        height: 40px!important;
+        width: 300px!important;
+    }
+    button>span{
+        font-size: 1.1rem;
+        
+    }
+    div>svg{
+        height: 24px;
+        width: 24px;
+    }
+}
+
+@media screen and (min-width: 1400px){
+    .login-button-oauth{
+        height: 80px!important;
+        width: 500px!important;
+    }
+    button>span{
+        font-size: 1.8rem;
+        
+    }
+    div>svg{
+        height: 35px;
+        width: 35px;
+    }
+}
+
+button > span{
+    margin: 0px!important;
+   
+    font-size: 1.14rem;
+    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+    background-color: #fff;
+    color: #858585;
+    cursor: pointer;
+}
+
+button>span:hover{
+    text-decoration: underline;
+}
+
+div>svg{
+    height: 20px;
+    width: 20px;
+}
+

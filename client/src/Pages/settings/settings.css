@@ -1,0 +1,84 @@
+.setting{
+    height: inherit;
+    background-color: #dad6fc;
+}
+
+.form-setting-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.form-setting{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    min-width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.profilePicture{
+    border-radius: 100%;
+    height: 160px;
+    width: 160px;  
+    object-fit: cover;
+}
+
+.profilePicture:hover{
+    opacity: 0.5;
+}
+
+.setting-input{
+    width: 50%;
+    margin: 15px;
+    height: 40px;
+    border-radius: 20px;
+    color: #858585;
+    outline: none;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+    font-size: 22px;
+}
+
+.setting-password{
+    margin: 15px;
+    width: 50%;
+    border-radius: 20px;
+    color: #858585;
+    outline: none;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+    font-size: 22px;
+    height: 40px;
+}
+
+.setting-button{
+    margin-top: 20px;
+    margin-right: 60px;
+    width: 15%;
+    max-width: 50%;
+    border-radius: 10px;
+    height: 40px;
+   background-color: rgb(243, 49, 49);
+    outline: none;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+    font-size: 18px;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+.setting-button:hover{
+    background-color: rgb(245, 97, 97);
+}
+

@@ -1,0 +1,56 @@
+sidebar*{
+    font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Fira Sans,Droid Sans,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+}
+
+.sidebar{
+    margin: 5px;
+    padding-bottom: 30px;
+    background-color: white;
+    border-radius: 10px;
+    width: 30%;
+    float: right;
+   
+}
+
+.sidebar-details{
+    justify-content: center;
+    align-items: center; 
+    display: flex; 
+    flex-direction: column;
+}
+
+.sidebar-details-authorname{
+    margin: 5px;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.sidebar-details-authorwork{
+    margin: 5px;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.sidebar-details-social-items-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar-details-social-items{
+    padding:0px!important;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar-details-social-item{
+    list-style: none;
+    margin: 10px;
+}
+
+.sidebar-social-icon{
+    font-size: 30px;
+}

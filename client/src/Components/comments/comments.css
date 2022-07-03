@@ -1,0 +1,14 @@
+.comment-wrapper{
+    width: inherit;
+    height: 300px;
+    background-color: bisque;
+}
+
+.comments-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: inherit;
+    margin-left: 0px!important;
+}
