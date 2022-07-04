@@ -62,7 +62,7 @@ figure>img{
 .single-post-details{
     height: 69px;
     display: flex;
-    background-color: whitesmoke;
+   
     padding-top: 10px;
     
 }
@@ -126,3 +126,4 @@ figure>img{
 .fa-twitter{
     color: skyblue;
 }
+
