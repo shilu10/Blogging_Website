@@ -35,10 +35,10 @@
 }
 
 .setting-input{
-    width: 50%;
+    width: 60%;
     margin: 15px;
     height: 40px;
-    border-radius: 20px;
+    border-radius: 10px;
     color: #858585;
     outline: none;
     border-top-style: hidden;
@@ -50,8 +50,8 @@
 
 .setting-password{
     margin: 15px;
-    width: 50%;
-    border-radius: 20px;
+    width: 60%;
+    border-radius: 10px;
     color: #858585;
     outline: none;
     border-top-style: hidden;
@@ -65,8 +65,9 @@
 .setting-button{
     margin-top: 20px;
     margin-right: 60px;
-    width: 15%;
-    max-width: 50%;
+    width: 20%;
+    margin-left: 5%;
+    max-width: 60%;
     border-radius: 10px;
     height: 40px;
    background-color: rgb(243, 49, 49);
@@ -84,3 +85,18 @@
     background-color: rgb(245, 97, 97);
 }
 
+@media screen and (max-width:450px){
+    .setting{
+        background-color: #f4f1fd;
+    }
+    .setting-input{
+        width: 90%!important;
+    }
+    .setting-password{
+        width: 90%!important;
+    }
+    .setting-button{
+        width: 90%!important;
+        margin-left:12%
+    }
+}

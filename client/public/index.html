@@ -27,8 +27,18 @@
 
   <style>
     body, html { overflow-x:hidden; }
+   
   </style>
 
   <script src="../../client/prism.js"></script>
 
+  <!--This script used to avoid a ui distoration when the mobile keyboard is
+    opened -> important
+  -->
+  <script type="text/javascript">
+    var isAndroid = navigator.userAgent.toLowerCase().indexOf("android") > -1; //&& ua.indexOf("mobile");
+    if(isAndroid) {
+        document.write('<meta name="viewport" content="width=device-width,height='+window.innerHeight+', initial-scale=1.0">');
+    }
+    </script> 
 </html>

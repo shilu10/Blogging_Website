@@ -30,7 +30,7 @@
     }
 }
 
-@media screen and (max-width: 371px) and (min-width:321px){
+@media screen and (max-width: 420px) and (min-width:321px){
     .login-button-oauth{
         height: 45px!important;
         width: 320px!important;

@@ -3,12 +3,10 @@ import './login.css';
 import { useNavigate, Link } from 'react-router-dom';
 import toast, { Toaster } from "react-hot-toast";
 import axios from "axios";
-import { gapi } from "gapi-script";
 import LoginButton from '../../Components/loginbutton/LoginButton';
 import { useSelector, useDispatch } from 'react-redux';
 import { registerActions, loginActions } from '../../Components/store/store';
 import jwt_decode from 'jwt-decode';
-
 
 export default function Login() {
   const [passwordtype, setpasswordType] = useState("password")
@@ -18,9 +16,14 @@ export default function Login() {
   const navigateLogin = useNavigate(null);
   const currentregister = useSelector((state)=>state.registerReducer.currentRegister);
   const dispatch = useDispatch();
-  
+
   useEffect(() => {
-    
+  toast('You are in good shape, please login to continue!', {
+    icon: '👏',
+  });
+},[]);
+
+  useEffect(() => {
     if(currentregister){
       toast.success("You are Successfully registered, Please Login to continue!!!", {
           autoClose: 5000,
@@ -32,7 +35,6 @@ export default function Login() {
       });
     }      
       dispatch(registerActions.setCurrentRegister(false));
-    
 }, []);
 
   const handleToggleLogin = () => {
@@ -92,16 +94,19 @@ export default function Login() {
   return (
     <div className="login-page">
       <div className="login-wrapper">
-        <div className='website-logo' style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
-        </div>
+       
         <div className='login-container' style={{justifyContent: "center", alignItems: "center", display: "flex", flexDirection: "column"}}>
-            <h2 className='login-header'>Sign in</h2>
+          <div className='website-logo' style={{display: "flex", justifyContent: "center", alignItems: "center", marginBottom: "10px"}}>
+            <i style={{fontSize:"32px", marginRight: "20px"}} class="fa fa-cube"></i>
+            <span><h2 className='login-header'>Sign in</h2></span>
+          </div>
             <LoginButton />
             <h2 className='or-class'>or</h2>
             <input type="text" required 
               placeholder="Email or UserName" 
               className='login-email-input'
               value={identity}
+              
               onChange={(e) => {
                 setIdentity(e.target.value); 
                   }}
@@ -112,6 +117,7 @@ export default function Login() {
                 placeholder="Enter Your Password" 
                 className='login-password'
                 value={password1}
+               
                 onChange={(e) => {
                   setPassword1(e.target.value); 
                 }}
@@ -123,7 +129,7 @@ export default function Login() {
               <p className='checkbox-text'>Remember Me!</p>
             </div>
             <button className='login-submit-button' onClick={handleSubmit}>Sign In</button>
-            <p className='signup-footer'>Don't have an account <Link to={"/register"}>Signup here</Link></p>
+            <p className='signup-footer'>Don't have an account <Link to={"/register"} style={{color: "#233c7b"}}>Signup here</Link></p>
         </div>
     </div>
   </div>

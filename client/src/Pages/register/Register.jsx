@@ -62,12 +62,14 @@ const Register = () => {
   return (
       <div className='register-page'>
         <div className="register-wrapper">
-          <div className='website-logo-register' style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
-
-          </div>
+          
           <Toaster />
           <div className='register-container' style={{justifyContent: "center", alignItems: "center", display: "flex", flexDirection: "column"}}>
-              <h2>Signup Here</h2>
+            <div className='website-logo-register' style={{marginBottom:"10px", display: "flex", justifyContent: "center", alignItems: "center"}}>
+              <i style={{fontSize:"32px", marginRight: "20px"}} class="fa fa-cube"></i>
+              <span><h2>Signup Here</h2></span>
+            </div>
+             
               <LoginButton />
               <h2 className='or-class-register'>or</h2>
               <input type="Enter your Email" required 
@@ -105,7 +107,7 @@ const Register = () => {
                 <p className='checkbox-text'>Remember Me!</p>
               </div>
               <button className='register-submit-button' onClick={handleSubmitRegister}>Sign up</button>
-              <p className='signin-footer'>Already have an account? <Link to={"/login"}>Signin here</Link></p>
+              <p className='signin-footer'>Already have an account? <Link style={{color: "#233c7b"}} to={"/login"}>Signin here</Link></p>
           </div>
         </div>
       </div>

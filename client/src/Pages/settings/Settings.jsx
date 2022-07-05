@@ -20,6 +20,7 @@ const Settings = () => {
     var profilePicture = sessionStorage.getItem("profilePicture"); 
     var email = null;
     var isUser = false;
+   
 
     if(access_token){
         var decoded = jwt_decode(access_token);
@@ -41,6 +42,10 @@ const Settings = () => {
         profilePicture = userProfile.imageUrl;
     };
 
+    useEffect(()=>{
+        toast.error("You should have login to update your profile!!")
+    }, []);
+
     const [updatedUsername, setUsername] = useState(realUsername);
     const [password, setPassword] = useState("");
     const [imageFile, setImageFile] = useState("");
@@ -55,6 +60,7 @@ const Settings = () => {
         };
 
     const submitUpdate = async(e) => {
+        
         e.preventDefault();
         if(isUser && ((realUsername !== updatedUsername || password) || imageFile)){
             try{
@@ -132,7 +138,6 @@ const Settings = () => {
         
     return(
         <div className="setting" >
-           
             <Toaster/>
             <div className='form-setting-wrapper'>
                 <div className='form-setting'>
@@ -167,6 +172,7 @@ const Settings = () => {
                     <button className='setting-button' 
                         onClick={submitUpdate}
                         disabled={false ? canRegister : true}
+                        
                         >
                         Update
                     </button>
