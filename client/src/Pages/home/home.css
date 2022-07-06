@@ -1,6 +1,5 @@
 .body-container{
     display: flex;
-    
     flex-direction: column;  
     margin: 10px!important;
     flex-wrap: wrap;
@@ -11,3 +10,43 @@
         display: none!important;
     }
 }
+
+
+
+.pagination{
+    
+    width: 80%;
+    height: 40px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 7%;
+    top: 80px;
+    
+}
+
+.pagination a {
+    padding: 10px;
+    margin: 8px;
+    border-radius: 5px;
+    border: 1px solid #2b2eff;
+    color: #2b2eff;
+    cursor: pointer;
+}
+
+.pagination a:hover{
+    color: white;
+    background-color: #2b2eff;
+}
+
+.paginationActive a {
+    color: white;
+    background-color: #2b2eff;
+}
+
+.paginationDisabled a {
+    color: white;
+    background-color: #2b2eff;
+}
+

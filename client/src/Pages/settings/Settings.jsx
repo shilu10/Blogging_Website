@@ -43,7 +43,9 @@ const Settings = () => {
     };
 
     useEffect(()=>{
+        if(!isUser){
         toast.error("You should have login to update your profile!!")
+        };
     }, []);
 
     const [updatedUsername, setUsername] = useState(realUsername);

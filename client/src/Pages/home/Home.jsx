@@ -11,8 +11,10 @@ import client from '../../Assets/sanityClient';
 import { useSelector, useDispatch } from 'react-redux';
 import { loginActions, userActions, pictureActions } from '../../Components/store/store';
 import jwt_decode from 'jwt-decode';
+import ReactPaginate from 'react-paginate';
 
 const Home = () => {
+  const [pageNumber, setPageNumber] = useState(0);
 
   const userProfile = JSON.parse(sessionStorage.getItem("userProfile"));
   var profilePicture = useSelector(state=>state.pictureReducer.profilePicture);
@@ -21,6 +23,8 @@ const Home = () => {
   const [posts, setPosts] = useState([]);
   const dispatch = useDispatch();
   const query = '*[_type == "post"]{title, slug, body, mainImage{asset ->{url}, alt}, "authorName": author->name, "authorImage": author->image, "categories": categories[]->title, "createdAt": _createdAt}';
+  const postPerPage = 10;
+  const postVisited = pageNumber * postPerPage;
   
   var userId = null;
   var username = null;
@@ -125,23 +129,44 @@ const fetchProfile = async() => {
     userActions.setUser(user);
   }, []);
   
+  const displayPosts = posts
+    .slice(postVisited, postVisited + postPerPage)
+    .map(post => (
+      <Post key={ post.title } blogpost = {post} />
+    ));
+  
+  const pageCount = Math.ceil(posts.length / postPerPage);
+  
+  const handlePageClick = ({ selected }) => {
+    setPageNumber(selected)
+  }
   return (
         <div className='body-container'>
-            <Topbar isUser={username?true:false} profilePicture={profilePicture}/>
-            <Toaster />
-            <Header title="Simple Blogging Website" />
-            <div className="home">
-              {posts ? 
-              <>
-                <Posts>
-                  {posts.map((post) => (
-                      <Post key={ post.title } blogpost = {post} />
-                  ))}
-                </Posts>
-                <Sidebar />
-              </>
-              : <p>No blogpost</p>}
+          <Topbar isUser={username?true:false} profilePicture={profilePicture}/>
+          <Toaster />
+          <Header title="Simple Blogging Website" />
+          <div className="home">
+            <div className='posts-wrapper'>
+              <Posts>
+                {displayPosts}
+              </Posts>
+              <Sidebar />
             </div>
+            
+              <ReactPaginate 
+                previousLabel={"← Previous"}
+                nextLabel={"Next →"}
+                pageCount={pageCount}
+                onPageChange={handlePageClick}
+                containerClassName={"pagination"}
+                previousLinkClassName={"previousButton"}
+                nextLinkClassName={"nextButton"}
+                disabledClassName={"paginationDisabled"}
+                activeClassName={"paginationActive"}
+              />
+            
+          </div>
+         
         </div>
   )};
 
