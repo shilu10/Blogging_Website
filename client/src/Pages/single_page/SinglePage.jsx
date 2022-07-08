@@ -1,16 +1,13 @@
 import React from 'react'
-import Sidebar from '../../Components/sidebar/Sidebar';
-import { useState, useEffect, createContext } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import axios from 'axios';
 import SinglePost from '../../Components/singlePost/SinglePost';
 import './singlepage.css';
 import Topbar from '../../Components/topbar/Topbar';
 import Comments from '../../Components/comments/Comments';
 import jwt_decode from "jwt-decode";
 import client from '../../Assets/sanityClient';
-import { Hearts } from 'react-loader-spinner';
-import { current } from '@reduxjs/toolkit';
+import RingLoader from 'react-spinners/RingLoader';
 
 export default function SinglePage() {
   const userProfile = JSON.parse(sessionStorage.getItem("userProfile"));
@@ -67,8 +64,7 @@ const user = {
   }, [slug]);
   
   if(access_token){
-    var decoded = jwt_decode(access_token);
-    console.log(decoded, "from comments")
+    decoded = jwt_decode(access_token);
     if(decoded._doc){
       decoded = decoded._doc;
     }
@@ -81,25 +77,28 @@ const user = {
 
   if (isLoading) {
     return (
-      <div  className="loadingContainer">
-      <Hearts color="#00BFFF" height={80} width={80} />
+      <div className="loadingContainer">
+        <RingLoader
+          color="#5becd2"
+          size={100}
+        />
     </div>
     )
   }
   else{
-  return (
-    <div>
-      <Topbar profilePicture={profilePicture} isUser={currentUsername?true:false}/>
-      <br></br>
-      <br></br>
-      <div className='single-page-container'>
-        <div className='single-page'>
-            <SinglePost singleBlog={blog} />
-            <div className='single-page-comment-wrapper'>
-              <Comments blogName={slug} currentUsername={currentUsername} expDate={expDate} isUser={isUser}/>
-            </div>
+    return (
+      <div>
+        <Topbar profilePicture={profilePicture} isUser={currentUsername?true:false}/>
+        <br></br>
+        <br></br>
+        <div className='single-page-container'>
+          <div className='single-page'>
+              <SinglePost singleBlog={blog} />
+              <div className='single-page-comment-wrapper'>
+                <Comments blogName={slug} currentUsername={currentUsername} expDate={expDate} isUser={isUser}/>
+              </div>
+          </div>
         </div>
       </div>
-    </div>
-  )
+    )
 }};

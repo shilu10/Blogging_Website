@@ -26,10 +26,39 @@ post*{
     min-height: 50%
 }
 
+.blog-details-wrapper{
+    height: 28%;
+}
+
+.blog-title{
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif !important;
+    color: #374151;
+    font-size: 18px;
+}
+
+.blog-desc{
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif !important;
+    color: #111827;   
+}
+
+.blog-desc-wrapper{
+    height: 80%;
+}
+
+.blog-footer{
+    height: 18%
+}
+
+.blog-details-footer{
+    height: 40%;
+}
+
+.blog-desc{
+    font-size: 0.2rem;
+}
 
 /* laptop */
 @media screen and (max-width: 1120px)  {
-
     .card-img{
         object-fit: cover;
     }
@@ -37,12 +66,13 @@ post*{
         height: 50%!important;
     }
     .cards{
-        width: 44rem;
+        width: 40rem;
         height: 45rem;
     }
     .blog-title{
         font-size: 1.5rem!important;
         margin: 5px!important;
+        font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
     }
     .blog-desc{
         font-size: 1.1rem!important;
@@ -63,7 +93,7 @@ post*{
         margin: 5px;
     }
     .blog-desc-wrapper{
-        height: 95px!important;
+        height: 80%!important;
         width: 100%;
     }
 }
@@ -754,6 +784,6 @@ post*{
 }
 
 .blog-desc-wrapper{
-    height: 220px;
+    height: 80%;
     width: 100%;
 }

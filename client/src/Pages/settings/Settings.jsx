@@ -1,5 +1,4 @@
 import './settings.css';
-import Topbar from '../../Components/topbar/Topbar';
 import './settings.css'
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -11,7 +10,6 @@ import { pictureActions } from '../../Components/store/store';
 
 const Settings = () => {   
     const settingNavigator = useNavigate();
-    const [canRegister, setCanRegister] = useState(false);
     const userProfile = JSON.parse(sessionStorage.getItem("userProfile"));
     const dispatch = useDispatch();
     var access_token = sessionStorage.getItem("accessToken");
@@ -27,7 +25,7 @@ const Settings = () => {
         if(decoded._doc){
         decoded = decoded._doc;
         }
-        setCanRegister(true);
+        
         userId = decoded._id;
         realUsername = decoded.username;
         email = decoded.email;
@@ -173,7 +171,7 @@ const Settings = () => {
                     /> 
                     <button className='setting-button' 
                         onClick={submitUpdate}
-                        disabled={false ? canRegister : true}
+                        
                         
                         >
                         Update

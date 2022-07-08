@@ -24,7 +24,6 @@
 }
 
 .login-email-input{
-    
     height: 50px;
     width: 350px;
     border: 0.5px solid black; 
@@ -70,6 +69,7 @@
 }
 
 .login-password{
+    height: 30px;
     width: 300px;
     outline: none;
     border-top-style: hidden;
