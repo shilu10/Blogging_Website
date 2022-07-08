@@ -4,7 +4,7 @@ post*{
 
 .cards{
     border-radius: 5px;
-    height: 45rem;
+    height: 43rem;
     box-shadow:  0.14px 0.14px 0 rgba(0, 0, 0, 0.2), 0 2px 3px 0 rgba(14, 11, 11, 0.19);
 }
 
@@ -677,12 +677,21 @@ post*{
     }   
 }
 
+@media screen and (min-width: 1300px) and (max-width: 1399px){
+    .card-img-wrapper{
+        height: 42%;
+    }
 
+}
 
 /* this for the further responsive */
-@media screen and (min-width: 1400px){
+@media screen and (min-width: 1400px) and (max-width: 1599px){
     .card-img-wrapper{
-        height: 50%;
+        height: 45%;
+    }
+    .cards{
+        width: 34rem;
+        height: 42rem;
     }
 }
 /* till this */
@@ -786,4 +795,60 @@ post*{
 .blog-desc-wrapper{
     height: 80%;
     width: 100%;
+}
+
+
+
+.blog-details-wrapper p {
+    font-size: 16px!important;
+    
+}
+
+.blog-details-wrapper h3{
+    font-size: 26px!important;
+}
+
+.blog-details-wrapper h2{
+    font-size: 22px!important;
+}
+
+.blog-details-wrapper h{
+    font-size: 18px!important;
+}
+
+.blog-details-wrapper h1{
+    font-size: 20px!important;
+}
+
+.blog-details-wrapper li {
+    font-size: 16px!important;
+    
+}
+
+.blog-details-wrapper ul {
+    font-size: 16px!important;
+    
+}
+
+.blog-details-wrapper ol {
+    font-size: 16px!important;
+    
+}
+
+.blog-details-wrapper pre{
+    font-size: 15px;
+}
+
+@media screen and (min-width: 1120px){
+    .blog-details-wrapper{
+        height: 43%;
+    }
+    .blog-desc{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
+    }
+
 }

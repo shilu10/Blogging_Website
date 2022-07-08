@@ -275,10 +275,16 @@ figure>img{
     .paragraph pre{
         font-size: 16px;
     }
+    .author-name{
+        font-size: 15px;
+    }
+    .single-post-blog-date{
+        font-size: 14px;
+    }
     
 }
 
-@media screen and (min-width: 430px) and (max-width:499px){
+@media screen and (min-width: 401px) and (max-width:499px){
     .paragraph p {
         font-size: 17px!important;
     }
@@ -313,5 +319,17 @@ figure>img{
     .paragraph pre{
         font-size: 16px;
     }
+    .author-name{
+        font-size: 15px;
+    }
+    .single-post-blog-date{
+        font-size: 14px;
+    }
     
+}
+
+@media screen and (max-width: 360px){
+    .single-post-blog-date{
+        font-size: 12px;
+    }
 }
