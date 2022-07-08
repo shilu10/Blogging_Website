@@ -5,7 +5,7 @@
     flex-direction: column;
 }
 .single-page{
-    width: 65%;
+    width: 70%;
     margin-top: 0px!important;
 }
 
@@ -17,7 +17,7 @@
 
 @media screen and (max-width: 1000px){
     .single-page{
-        width: 95%!important;
+        width: 92%!important;
     }
 }
 
@@ -33,3 +33,10 @@
     justify-content: center;
     align-items: center;
 }
+
+@media screen and (max-width: 500px){
+    .single-page{
+        width: 86%!important;
+    }
+}
+

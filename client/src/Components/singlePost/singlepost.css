@@ -1,5 +1,39 @@
-.paragraph p{
-    font-size: 0.5rem;
+
+
+.paragraph p {
+    font-size: 22px!important;
+}
+
+.paragraph h3{
+    font-size: 32px!important;
+}
+
+.paragraph h2{
+    font-size: 26px!important;
+}
+
+.paragraph h{
+    font-size: 22px!important;
+}
+
+.paragraph h1{
+    font-size: 24px!important;
+}
+
+.paragraph li {
+    font-size: 22px!important;
+}
+
+.paragraph ul {
+    font-size: 22px!important;
+}
+
+.paragraph ol {
+    font-size: 22px!important;
+}
+
+.paragraph pre{
+    font-size: 18px;
 }
 
 .single-post-img{
@@ -130,3 +164,154 @@ figure>img{
     color: skyblue;
 }
 
+@media screen and (min-width: 1200px){
+    .paragraph p {
+        font-size: 28px!important;
+    }
+    
+    .paragraph h3{
+        font-size: 38px!important;
+    }
+    
+    .paragraph h2{
+        font-size: 32px!important;
+    }
+    
+    .paragraph h{
+        font-size: 30px!important;
+    }
+    
+    .paragraph h1{
+        font-size: 28px!important;
+    }
+    
+    .paragraph li {
+        font-size: 28px!important;
+    }
+    
+    .paragraph ul {
+        font-size: 28px!important;
+    }
+    
+    .paragraph ol {
+        font-size: 28px!important;
+    }
+    .paragraph pre{
+        font-size: 25px;
+    }
+    
+}
+
+@media screen and (min-width: 500px) and (max-width: 700px){
+    .paragraph p {
+        font-size: 18px!important;
+    }
+    
+    .paragraph h3{
+        font-size: 28px!important;
+    }
+    
+    .paragraph h2{
+        font-size: 24px!important;
+    }
+    
+    .paragraph h{
+        font-size: 20px!important;
+    }
+    
+    .paragraph h1{
+        font-size: 22px!important;
+    }
+    
+    .paragraph li {
+        font-size: 18px!important;
+    }
+    
+    .paragraph ul {
+        font-size: 18px!important;
+    }
+    
+    .paragraph ol {
+        font-size: 18px!important;
+    }
+    .paragraph pre{
+        font-size: 18px;
+    }
+    
+}
+
+@media screen and (max-width: 400px){
+    .paragraph p {
+        font-size: 16px!important;
+    }
+    
+    .paragraph h3{
+        font-size: 28px!important;
+    }
+    
+    .paragraph h2{
+        font-size: 24px!important;
+    }
+    
+    .paragraph h{
+        font-size: 20px!important;
+    }
+    
+    .paragraph h1{
+        font-size: 22px!important;
+    }
+    
+    .paragraph li {
+        font-size: 16px!important;
+    }
+    
+    .paragraph ul {
+        font-size: 16px!important;
+    }
+    
+    .paragraph ol {
+        font-size: 16px!important;
+    }
+    .paragraph pre{
+        font-size: 16px;
+    }
+    
+}
+
+@media screen and (min-width: 430px) and (max-width:499px){
+    .paragraph p {
+        font-size: 17px!important;
+    }
+    
+    .paragraph h3{
+        font-size: 20px!important;
+    }
+    
+    .paragraph h2{
+        font-size: 26px!important;
+    }
+    
+    .paragraph h{
+        font-size: 22px!important;
+    }
+    
+    .paragraph h1{
+        font-size: 24px!important;
+    }
+    
+    .paragraph li {
+        font-size: 17px!important;
+    }
+    
+    .paragraph ul {
+        font-size: 17px!important;
+    }
+    
+    .paragraph ol {
+        font-size: 17px!important;
+    }
+    .paragraph pre{
+        font-size: 16px;
+    }
+    
+}
